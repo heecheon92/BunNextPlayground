@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`bunx --bun create-next-app@latest`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This project is to be used as a experimental features and integration of Bun and Nextjs.
+This project is to be used as testing for experimental features and integration of Bun and Nextjs.
 
 ```bash
 # Install Bun
