@@ -1,15 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`bunx --bun create-next-app@latest`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+This project is to be used as testing for experimental features and integration of Bun and Nextjs.
+
+```bash
+# Install Bun
+curl https://bun.sh/install | bash
+
+# Apply Bun path (or restart the terminal)
+source ~/.zshrc
+
+# Create next app using bun js runtime environment with "--bun" flag
+bunx --bun create-next-app@latest
+```
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
