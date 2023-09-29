@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Box from "../server/component/box"
+import { useState } from "react";
+
+import Box from "../server/component/box";
 
 export default function ClientPage() {
+  const [toggle, setToggle] = useState(false);
 
-    const [toggle, setToggle] = useState(false)
-
-    return (
-        <div className="flex flex-col">
-            <button onClick={() => setToggle(!toggle)}>
-                {toggle ? (<>{"hi"}</>) : (<Box />)}
-            </button>
-        </div>
-    )
+  return (
+    <div className="flex flex-col">
+      <button onClick={() => setToggle(!toggle)}>
+        {toggle ? <>{"hi"}</> : <Box />}
+      </button>
+    </div>
+  );
 }

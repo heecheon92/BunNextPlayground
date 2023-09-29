@@ -1,6 +1,7 @@
+import { isServerSide } from "@/app/util";
+
 export default function Box() {
+  console.log("is client side: ", isServerSide());
 
-    console.log("is client side: ", typeof window !== undefined)
-
-    return <div className="w-[100px] h-[100px] bg-rose-500"></div>
+  return <div className="h-[100px] w-[100px] bg-rose-500"></div>;
 }
