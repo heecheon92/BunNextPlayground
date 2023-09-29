@@ -1,6 +1,6 @@
-
 import { ReadonlyRequestCookies } from "next/dist/server/web/spec-extension/adapters/request-cookies";
 import { cookies } from "next/headers";
+
 import { AuthToken, authTokenSchema } from "../types";
 
 export async function POST(request: Request) {
@@ -14,7 +14,7 @@ export async function POST(request: Request) {
         `ROUTE TS parsed? ${tokenResult.success}: `,
         JSON.stringify(res, null, 2),
       );
-    return new Response("Cookies set", {
+      return new Response("Cookies set", {
         status: 200,
         headers: {
           "Set-Cookie": cookieStore.toString(),
@@ -33,21 +33,19 @@ export async function POST(request: Request) {
 }
 
 export async function DELETE(request: Request) {
-    const cookieStore = cookies()
+  const cookieStore = cookies();
 
-    for (const each of cookieStore.getAll()) {
-        cookieStore.delete(each)
-    }
+  for (const each of cookieStore.getAll()) {
+    cookieStore.delete(each);
+  }
 
-    return new Response("Cookies set", {
-        status: 200,
-        headers: {
-          "Set-Cookie": "",
-        },
-    });
+  return new Response("Cookies set", {
+    status: 200,
+    headers: {
+      "Set-Cookie": "",
+    },
+  });
 }
-
-
 
 function setAccessToken(cookie: ReadonlyRequestCookies, token: AuthToken) {
   cookie.set("accessToken", token.accessToken, {
