@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run lint && NODE_OPTIONS='--inspect' next dev",
+    "dev": "next lint && NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "tsc && next lint",
